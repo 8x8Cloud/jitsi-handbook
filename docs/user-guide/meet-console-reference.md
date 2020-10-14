@@ -4,8 +4,8 @@ Jitsi as a Service (JaaS) enables you to develop and integrate Jitsi Meetings fu
 
 As shown in the following diagram, the JaaS Meet Console enables you to configure and incorporate the powerful [iFrame](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe) and [Mobile SDK](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-mobile) Jitsi components to further facilitate and enhance your business operations:
 
-
-![alt_text](images/image1.png "image_tooltip")
+![jaas onboard](../../assets/images/jaas_onboard.PNG)
+![jaas onboard](assets/images/jaas_onboard.PNG)
 
 
 Your JaaS account provides an isolated context referred to as a tenant.  A tenant is a group of users who share a common access with specific privileges. This is where your meetings will take place and where you will create your meeting room. The tenant defines the root level for the meeting room namespaces you can create and use. All JaaS Meeting rooms are prefixed with the tenant ID (
