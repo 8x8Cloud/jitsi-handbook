@@ -19,27 +19,42 @@ meet.jit.si:
 <script src='https://meet.jit.si/external_api.js'></script>
 ```
 
-## API
+## Creating the Jitsi Meet API object
 
-### `api = new JitsiMeetExternalAPI(domain, options)`
+**`api = new JitsiMeetExternalAPI(domain, options)`**
 
-The next step for embedding Jitsi Meet is to create the Jitsi Meet API object.
-Its constructor takes a number of options:
+After you have installed the Jitsi 8x8 Meet API library, you need to create the Jitsi 8x8 Meet API object.
 
-* **domain**: domain used to build the conference URL, 'meet.jit.si' for
-  example.
-* **options**: object with properties - the optional arguments:
-    * **roomName**: (optional) name of the room to join.
-    * **width**: (optional) width for the iframe which will be created. If a number is specified it's treated as pixel units. If a string is specified the format is number followed by 'px', 'em', 'pt' or '%'.
-    * **height**: (optional) height for the iframe which will be created. If a number is specified it's treated as pixel units. If a string is specified the format is number followed by 'px', 'em', 'pt' or '%'.
-    * **parentNode**: (optional) HTML DOM Element where the iframe will be added as a child.
-    * **configOverwrite**: (optional) JS object with overrides for options defined in [config.js].
+The API object constructor can use the following options:
+
+* **domain**: The domain used to build the conference URL (e.g., **`meet.jit.si`**.
+
+* **options**: The object with properties. 
+
+  Optional arguments include:
+  
+    * **roomName**: The name of the room to join.
+    
+    * **width**: The width for the created Iframe. If a number is specified it is treated as pixel units. If a string is specified the format is number followed by 'px', 'em', 'pt' or '%'.
+    
+    * **height**: The height for the created Iframe. If a number is specified it is treated as pixel units. If a string is specified the format is number followed by 'px', 'em', 'pt' or '%'. 
+    
+    * **parentNode**: The HTML DOM Element where the iframe will be added as a child.
+    
+    * **configOverwrite**: The JavaScript (JS) object with overrides for options defined in [config.js].
+    
     * **interfaceConfigOverwrite**: (optional) JS object with overrides for options defined in [interface_config.js].
+    
     * **noSSL**: (optional, defaults to false) Boolean indicating if the server should be contacted using HTTP or HTTPS.
+    
     * **jwt**: (optional) [JWT](https://jwt.io/) token.
+    
     * **onload**: (optional) handler for the iframe onload event.
+    
     * **invitees**: (optional) Array of objects containing information about new participants that will be invited in the call.
+    
     * **devices**: (optional) A map containing information about the initial devices that will be used in the call.
+    
     * **userInfo**: (optional) JS object containing information about the participant opening the meeting, such as `email`.
 
 Example:
