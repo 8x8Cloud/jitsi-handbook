@@ -37,7 +37,7 @@ The API object constructor can use the following options:
     
     * **width**: The width for the created Iframe. If a number is specified it is treated as pixel units. If a string is specified the format is number followed by **`px`, `em`, `pt`, or `%`**.
     
-    * **height**: The height for the created Iframe. If a number is specified it is treated as pixel units. If a string is specified the format is number followed by 'px', 'em', 'pt' or '%'. 
+    * **height**: The height for the created Iframe. If a number is specified it is treated as pixel units. If a string is specified the format is number followed by **`px`, `em`, `pt`, or `%`**. 
     
     * **parentNode**: The HTML DOM Element where the iframe will be added as a child.
     
@@ -100,7 +100,7 @@ const options = {
 const api = new JitsiMeetExternalAPI(domain, options);
 ```
 
-You can also pass a JWT token to Jitsi Meet:
+You can also pass a JWT token to Jitsi Meet using the follwoing:
 
  ```javascript
 const options = {
@@ -111,7 +111,7 @@ const options = {
 const api = new JitsiMeetExternalAPI(domain, options);
  ```
 
-You can set the `userInfo` (email, display name) for the call:
+You can set the `userInfo` (e.g., email, display name) for the call:
 
 ```javascript
 var domain = "meet.jit.si";
