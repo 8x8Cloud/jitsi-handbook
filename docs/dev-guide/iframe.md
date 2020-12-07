@@ -23,7 +23,7 @@ meet.jit.si:
 
 **`api = new JitsiMeetExternalAPI(domain, options)`**
 
-After you have installed the Jitsi 8x8 Meet API library, you need to create the Jitsi 8x8 Meet API object.
+After you have installed the Meet API library, you need to create the Jitsi Meet API object.
 
 The API object constructor can use the following options:
 
@@ -86,7 +86,7 @@ const options = {
 const api = new JitsiMeetExternalAPI(domain, options);
 ```
 
-You can override options set in [config.js] and [interface_config.js] using **configOverwrite** and **interfaceConfigOverwrite**, respectively.
+You can override options set in the **`config.js`** file and the **`interface_config.js`** using **configOverwrite** and **interfaceConfigOverwrite**, respectively.
 
 For example, to enable the filmstrip-only interface mode, you can use the following:
 
@@ -111,7 +111,7 @@ const options = {
 const api = new JitsiMeetExternalAPI(domain, options);
  ```
 
-You can set the `userInfo` (e.g., email, display name) for the call:
+You can set the **`userInfo`** (e.g., email, display name) for the call:
 
 ```javascript
 var domain = "meet.jit.si";
