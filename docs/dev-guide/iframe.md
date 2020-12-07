@@ -41,21 +41,21 @@ The API object constructor can use the following options:
     
     * **parentNode**: The HTML DOM Element where the iframe will be added as a child.
     
-    * **configOverwrite**: The JavaScript (JS) object with overrides for options defined in [config.js].
+    * **configOverwrite**: The JavaScript (JS) object with overrides for options defined in the `config.js` file.
     
-    * **interfaceConfigOverwrite**: (optional) JS object with overrides for options defined in [interface_config.js].
+    * **interfaceConfigOverwrite**: The JS object with overrides for options defined in the `interface_config.js` file.
     
-    * **noSSL**: (optional, defaults to false) Boolean indicating if the server should be contacted using HTTP or HTTPS.
+    * **noSSL**: The Boolean data type which indicates if the server should be contacted using HTTP or HTTPS. The default value to `false`.
     
-    * **jwt**: (optional) [JWT](https://jwt.io/) token.
+    * **jwt**: The [JWT](https://jwt.io/) token.
     
-    * **onload**: (optional) handler for the iframe onload event.
+    * **onload**: The handler for the IFrame onload event.
     
-    * **invitees**: (optional) Array of objects containing information about new participants that will be invited in the call.
+    * **invitees**: An array of objects containing information about new participants who will be invited to the call.
     
-    * **devices**: (optional) A map containing information about the initial devices that will be used in the call.
+    * **devices**: A map containing information about the initial devices that will be used in the call.
     
-    * **userInfo**: (optional) JS object containing information about the participant opening the meeting, such as `email`.
+    * **userInfo**: The JS object containing information about the participant opening the meeting (e.g.,`email`).
 
 Example:
 
@@ -86,8 +86,9 @@ const options = {
 const api = new JitsiMeetExternalAPI(domain, options);
 ```
 
-You can override options set in [config.js] and [interface_config.js] via **configOverwrite** and **interfaceConfigOverwrite** respectively.
-For example, to enable the filmstrip-only interface mode, you can use:
+You can override options set in [config.js] and [interface_config.js] using **configOverwrite** and **interfaceConfigOverwrite**, respectively.
+
+For example, to enable the filmstrip-only interface mode, you can use the following:
 
 ```javascript
 const options = {
