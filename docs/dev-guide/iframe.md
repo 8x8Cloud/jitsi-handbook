@@ -27,7 +27,7 @@ After you have installed the Jitsi 8x8 Meet API library, you need to create the 
 
 The API object constructor can use the following options:
 
-* **domain**: The domain used to build the conference URL (e.g., **`meet.jit.si`**.
+* **domain**: The domain used to build the conference URL (e.g., **`meet.jit.si`**).
 
 * **options**: The object with properties. 
 
@@ -41,11 +41,11 @@ The API object constructor can use the following options:
     
     * **parentNode**: The HTML DOM Element where the iframe will be added as a child.
     
-    * **configOverwrite**: The JavaScript (JS) object with overrides for options defined in the `config.js` file.
+    * **configOverwrite**: The JavaScript (JS) object with overrides for options defined in the **`config.js`** file.
     
-    * **interfaceConfigOverwrite**: The JS object with overrides for options defined in the `interface_config.js` file.
+    * **interfaceConfigOverwrite**: The JS object with overrides for options defined in the **`interface_config.js`** file.
     
-    * **noSSL**: The Boolean data type which indicates if the server should be contacted using HTTP or HTTPS. The default value to `false`.
+    * **noSSL**: The Boolean data type which indicates if the server should be contacted using HTTP or HTTPS. The default value is **`false`**.
     
     * **jwt**: The [JWT](https://jwt.io/) token.
     
@@ -55,7 +55,7 @@ The API object constructor can use the following options:
     
     * **devices**: A map containing information about the initial devices that will be used in the call.
     
-    * **userInfo**: The JS object containing information about the participant opening the meeting (e.g.,`email`).
+    * **userInfo**: The JS object containing information about the participant opening the meeting (e.g.,email).
 
 Example:
 
