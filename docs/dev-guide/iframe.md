@@ -35,7 +35,7 @@ The API object constructor can use the following options:
   
     * **roomName**: The name of the room to join.
     
-    * **width**: The width for the created Iframe. If a number is specified it is treated as pixel units. If a string is specified the format is number followed by 'px', 'em', 'pt' or '%'.
+    * **width**: The width for the created Iframe. If a number is specified it is treated as pixel units. If a string is specified the format is number followed by **`px`, `em`, `pt`, or `%`**.
     
     * **height**: The height for the created Iframe. If a number is specified it is treated as pixel units. If a string is specified the format is number followed by 'px', 'em', 'pt' or '%'. 
     
