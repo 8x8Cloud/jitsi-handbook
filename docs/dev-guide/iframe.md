@@ -5,7 +5,7 @@ title: IFrame API
 
 You can use the Jitsi Meet API to embed Jitsi Meet in to your application. You are also welcome to use it for embedding the globally distributed and highly available deployment on meet.jit.si itself. The only thing we ask for in that case is that you please DO NOT remove the jitsi.org logo from the top left corner.
 
-## Installation
+## **Installation**
 
 To embed Jitsi Meet in your application you need to add the Jitsi Meet API library:
 
@@ -19,7 +19,7 @@ meet.jit.si:
 <script src='https://meet.jit.si/external_api.js'></script>
 ```
 
-## Creating the Jitsi Meet API object
+## **Creating the Jitsi Meet API object**
 
 **`api = new JitsiMeetExternalAPI(domain, options)`**
 
@@ -39,7 +39,7 @@ The API object constructor can use the following options:
     
     * **height**: The height for the created Iframe. If a number is specified it is treated as pixel units. If a string is specified the format is number followed by **`px`, `em`, `pt`, or `%`**. 
     
-    * **parentNode**: The HTML DOM Element where the iframe will be added as a child.
+    * **parentNode**: The HTML DOM Element where the Iframe will be added as a child.
     
     * **configOverwrite**: The JavaScript (JS) object with overrides for options defined in the **`config.js`** file.
     
@@ -86,7 +86,7 @@ const options = {
 const api = new JitsiMeetExternalAPI(domain, options);
 ```
 
-You can override options set in the **`config.js`** file and the **`interface_config.js`** using **configOverwrite** and **interfaceConfigOverwrite**, respectively.
+You can override options set in the **`config.js`** file and the **`interface_config.js`** using **`configOverwrite`** and **`interfaceConfigOverwrite`**, respectively.
 
 For example, to enable the filmstrip-only interface mode, you can use the following:
 
@@ -100,7 +100,7 @@ const options = {
 const api = new JitsiMeetExternalAPI(domain, options);
 ```
 
-You can also pass a JWT token to Jitsi Meet using the follwoing:
+You can also pass a JWT token to Jitsi Meet using the following:
 
  ```javascript
 const options = {
@@ -125,7 +125,7 @@ var options = {
 var api = new JitsiMeetExternalAPI(domain, options);
 ```
 
-**Configuring the tile view**
+### **Configuring the tile view**
 
 You can configure the maximum number of columns in tile view by overriding the ```TILE_VIEW_MAX_COLUMNS``` property from [interface_config.js] via **interfaceConfigOverwrite**:
 
@@ -140,16 +140,18 @@ const api = new JitsiMeetExternalAPI(domain, options);
 Note: ```TILE_VIEW_MAX_COLUMNS``` accepts values from 1 to 5. The default value is 5.
 
 
-### Controlling the embedded Jitsi Meet Conference
+### **Controlling the embedded Jitsi Meet Conference**
 
-* **captureLargeVideoScreenshot** - Captures the screenshot of the large video.
+* **captureLargeVideoScreenshot** - Captures the large video screenshot.
+
 ```javascript
 api.captureLargeVideoScreenshot().then(dataURL => {
     // dataURL = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAA..."
 });
 ```
-Device management `JitsiMeetExternalAPI` methods:
-* **getAvailableDevices** - Retrieve a list of available devices.
+## **Device management `JitsiMeetExternalAPI` methods**
+
+* **getAvailableDevices** - Retrieves a list of available devices.
 
 ```javascript
 api.getAvailableDevices().then(devices => {
@@ -176,7 +178,7 @@ api.getAvailableDevices().then(devices => {
     ...
 });
 ```
-* **getCurrentDevices** - Retrieve a list with the devices that are currently selected.
+* **getCurrentDevices** - Retrieves a list of currently devices.
 
 ```javascript
 api.getCurrentDevices().then(devices => {
@@ -203,7 +205,7 @@ api.getCurrentDevices().then(devices => {
     ...
 });
 ```
-* **getParticipantsInfo** - Returns an array containing participants information like participant id, display name, avatar URL and email.
+* **getParticipantsInfo** - Returns an array containing participant information such as participant ID, display name, avatar URL, or email address.
 
 ```javascript
 api.getParticipantsInfo();
@@ -213,7 +215,7 @@ api.getParticipantsInfo();
 ```javascript
 api.getVideoQuality();
 ```
-* **isDeviceChangeAvailable** - Resolves with true if the device change is available and with false if not.
+* **isDeviceChangeAvailable** - Resolves with true if the device change is available and with false if it is not.
 
 ```javascript
 // The accepted deviceType values are - 'output', 'input' or undefined.
@@ -221,36 +223,36 @@ api.isDeviceChangeAvailable(deviceType).then(isDeviceChangeAvailable => {
     ...
 });
 ```
-* **isDeviceListAvailable** - Resolves with true if the device list is available and with false if not.
+* **isDeviceListAvailable** - Resolves with true if the device list is available and with false if it is not.
 
 ```javascript
 api.isDeviceListAvailable().then(isDeviceListAvailable => {
     ...
 });
 ```
-* **isMultipleAudioInputSupported** - Resolves with true if multiple audio input is supported and with false if not.
+* **isMultipleAudioInputSupported** - Resolves with true if multiple audio inputs are supported and with false if they are not.
 
 ```javascript
 api.isMultipleAudioInputSupported().then(isMultipleAudioInputSupported => {
     ...
 });
 ```
-* **pinParticipant** - Elects the participant with the given id to be the pinned participant in order to always receive video for this participant (even when last n is enabled).
+* **pinParticipant** - Elects the participant with the given ID as the pinned participant in order to receive participant video (even when last **`pin`** is enabled).
 
 ```javascript
 api.pinParticipant(participantId);
 ```
-* **resizeLargeVideo** - Resizes the large video container as per the dimensions provided.
+* **resizeLargeVideo** - Resizes the large video container per the provided dimensions.
 
 ```javascript
 api.resizeLargeVideo(width, height);
 ```
-* **setAudioInputDevice** - Sets the audio input device to the one with the label or id that is passed.
+* **setAudioInputDevice** - Sets the audio input device to the one with the label or ID that is passed.
 
 ```javascript
 api.setAudioInputDevice(deviceLabel, deviceId);
 ```
-* **setAudioOutputDevice** - Sets the audio output device to the one with the label or id that is passed.
+* **setAudioOutputDevice** - Sets the audio output device to the one with the label or ID that is passed.
 
 ```javascript
 api.setAudioOutputDevice(deviceLabel, deviceId);
